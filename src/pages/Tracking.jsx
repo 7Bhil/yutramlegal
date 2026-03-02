@@ -104,8 +104,8 @@ const Tracking = () => {
   const handleKeyDown = (e) => { if (e.key === 'Enter') trackOrder() }
 
   return (
-    <div style={{ padding: '50px 20px' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+    <div style={{ padding: '50px 0' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto' }} className="container-px">
 
         {/* Header card — matches HTML */}
         <div style={{ textAlign: 'center', marginBottom: '40px', padding: '30px 20px', background: 'white', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
@@ -117,7 +117,7 @@ const Tracking = () => {
         <div style={{ background: 'white', borderRadius: '16px', boxShadow: '0 10px 40px rgba(0,0,0,0.1)', padding: '40px', marginBottom: '30px' }}>
           <div style={{ marginBottom: '20px' }}>
             <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600, color: '#2c3e50', fontSize: '0.95rem' }}>Tracking Number</label>
-            <div style={{ display: 'flex', gap: '15px' }}>
+            <div style={{ display: 'flex', gap: '15px' }} className="mobile-stack">
               <input
                 type="text"
                 value={trackingInput}
@@ -149,6 +149,7 @@ const Tracking = () => {
                 }}
                 onMouseEnter={e => { if (!isLoading) { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(255,107,53,0.3)' } }}
                 onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '' }}
+                className="mobile-w-full"
               >
                 {isLoading ? 'Tracking...' : 'Track'}
               </button>

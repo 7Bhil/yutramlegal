@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
 
       {/* Navigation */}
       <nav style={{ background: 'white', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', position: 'sticky', top: 0, zIndex: 1000 }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '15px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '15px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="container-px">
           {/* Logo */}
           <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#2c3e50', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
             <span style={{ fontSize: '2rem' }}>⚖️</span>
@@ -123,8 +123,8 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer style={{ background: '#2c3e50', color: 'white', padding: '60px 20px 30px', marginTop: '80px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <footer style={{ background: '#2c3e50', color: 'white', padding: '60px 0 30px', marginTop: '80px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }} className="container-px">
           {/* Top grid: 2fr 1fr 1fr 1fr */}
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '40px', marginBottom: '40px', paddingBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)' }} className="footer-top-grid">
             {/* Brand */}

@@ -132,13 +132,13 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section style={{ background: 'white', minHeight: '85vh', display: 'flex', alignItems: 'center', padding: '60px 20px', overflow: 'hidden' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', width: '100%' }}>
+      <section style={{ background: 'white', minHeight: '85vh', display: 'flex', alignItems: 'center', padding: '60px 0', overflow: 'hidden' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', width: '100%' }} className="hero-content-grid container-px">
           <div style={{ paddingRight: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ color: '#ff6b35', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '15px' }}>
               VETERAN-OWNED &amp; OPERATED
             </div>
-            <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '20px', lineHeight: 1.1, color: '#2c3e50' }}>
+            <h1 style={{ fontWeight: 800, marginBottom: '20px', color: '#2c3e50' }} className="responsive-h1">
               Yutramlegal Process Service
             </h1>
             <p style={{ fontSize: '1.3rem', color: '#2c3e50', fontWeight: 600, marginBottom: '15px' }}>
@@ -148,7 +148,7 @@ const Home = () => {
               Through Honor and Diversity, we connect conflicting parties together to resolve every legal matter with Dignity and Courtesy. Your Elite Process Service Ready to Get Your Jobs Done.
             </p>
 
-            <div style={{ display: 'flex', gap: '15px', marginBottom: '40px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '15px', marginBottom: '40px', flexWrap: 'wrap', justifyContent: 'center' }} className="hero-buttons-container">
               <button
                 onClick={scrollToOrder}
                 style={{
@@ -189,7 +189,7 @@ const Home = () => {
               </Link>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', paddingTop: '30px', borderTop: '2px solid #ecf0f1' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', paddingTop: '30px', borderTop: '2px solid #ecf0f1' }} className="hero-stats-grid">
               {[
                 { number: 'Veterans', label: 'Team Members' },
                 { number: 'MN + 5', label: 'States Covered' },

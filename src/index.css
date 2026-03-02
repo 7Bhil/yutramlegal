@@ -9,6 +9,14 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --container-padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    --container-padding: 15px;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -34,8 +42,39 @@
 
 /* Status badge classes (used in Tracking.jsx) */
 .status-pending     { background: #fff3cd; color: #856404; }
-.status-in-progress { background: #cce5ff; color: #004085; }
 .status-completed   { background: #d4edda; color: #155724; }
+
+/* Utility Classes */
+.container-px {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.responsive-h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 1024px) {
+  .responsive-h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-h1 {
+    font-size: 2.25rem;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .mobile-w-full {
+    width: 100% !important;
+  }
+}
 
 /* Responsive: show hamburger, hide desktop nav on ≤ 768px */
 @media (max-width: 768px) {
@@ -46,6 +85,32 @@
   .hero-content-grid {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
+    text-align: center;
+  }
+
+  .hero-content-grid > div:first-child {
+    order: 2;
+  }
+  .hero-content-grid > div:last-child {
+    order: 1;
+  }
+
+  .hero-buttons-container {
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+  }
+
+  .hero-buttons-container > * {
+    padding: 14px 15px !important;
+    font-size: 0.9rem !important;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
   }
 
   /* Footer: single column */
