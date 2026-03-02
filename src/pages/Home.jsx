@@ -132,82 +132,84 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section style={{ background: 'white', padding: '80px 20px', overflow: 'hidden' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <div style={{ color: '#ff6b35', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '15px' }}>
-            VETERAN-OWNED &amp; OPERATED
-          </div>
-          <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '20px', lineHeight: 1.1, color: '#2c3e50' }}>
-            Yutramlegal Process Service
-          </h1>
-          <p style={{ fontSize: '1.3rem', color: '#2c3e50', fontWeight: 600, marginBottom: '15px' }}>
-            The Reliable Tool to Deliver Your Legal Documents
-          </p>
-          <p style={{ fontSize: '1.1rem', marginBottom: '30px', color: '#5a6c7d', lineHeight: 1.6, maxWidth: '700px' }}>
-            Through Honor and Diversity, we connect conflicting parties together to resolve every legal matter with Dignity and Courtesy. Your Elite Process Service Ready to Get Your Jobs Done.
-          </p>
+      <section style={{ background: 'white', padding: '60px 20px', overflow: 'hidden' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+          <div style={{ paddingRight: '20px' }}>
+            <div style={{ color: '#ff6b35', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '15px' }}>
+              VETERAN-OWNED &amp; OPERATED
+            </div>
+            <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '20px', lineHeight: 1.1, color: '#2c3e50' }}>
+              Yutramlegal Process Service
+            </h1>
+            <p style={{ fontSize: '1.3rem', color: '#2c3e50', fontWeight: 600, marginBottom: '15px' }}>
+              The Reliable Tool to Deliver Your Legal Documents
+            </p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '30px', color: '#5a6c7d', lineHeight: 1.6 }}>
+              Through Honor and Diversity, we connect conflicting parties together to resolve every legal matter with Dignity and Courtesy. Your Elite Process Service Ready to Get Your Jobs Done.
+            </p>
 
-          <div style={{ display: 'flex', gap: '15px', marginBottom: '50px', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <button
-              onClick={scrollToOrder}
-              style={{
-                padding: '16px 35px',
-                background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%)',
-                color: 'white',
-                borderRadius: '6px',
-                fontWeight: 700,
-                fontSize: '1rem',
-                border: 'none',
-                cursor: 'pointer',
-                boxShadow: '0 4px 15px rgba(255,107,53,0.3)',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(255,107,53,0.4)' }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 4px 15px rgba(255,107,53,0.3)' }}
-            >
-              Place Order
-            </button>
-            <Link
-              to="/tracking"
-              style={{
-                padding: '16px 35px',
-                background: 'white',
-                color: '#ff6b35',
-                border: '2px solid #ff6b35',
-                borderRadius: '6px',
-                fontWeight: 700,
-                fontSize: '1rem',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease',
-                display: 'inline-block'
-              }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#fff5f0' }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'white' }}
-            >
-              Track Order
-            </Link>
+            <div style={{ display: 'flex', gap: '15px', marginBottom: '40px', flexWrap: 'wrap' }}>
+              <button
+                onClick={scrollToOrder}
+                style={{
+                  padding: '16px 35px',
+                  background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%)',
+                  color: 'white',
+                  borderRadius: '6px',
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  border: 'none',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 15px rgba(255,107,53,0.3)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(255,107,53,0.4)' }}
+                onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 4px 15px rgba(255,107,53,0.3)' }}
+              >
+                Place Order
+              </button>
+              <Link
+                to="/tracking"
+                style={{
+                  padding: '16px 35px',
+                  background: 'white',
+                  color: '#ff6b35',
+                  border: '2px solid #ff6b35',
+                  borderRadius: '6px',
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease',
+                  display: 'inline-block'
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#fff5f0' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'white' }}
+              >
+                Track Order
+              </Link>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', paddingTop: '30px', borderTop: '2px solid #ecf0f1' }}>
+              {[
+                { number: 'Veterans', label: 'Team Members' },
+                { number: 'MN + 5', label: 'States Covered' },
+                { number: 'Since 2014', label: 'Experience' },
+                { number: '7am-10pm', label: 'Service Hours' },
+              ].map((stat) => (
+                <div key={stat.label} style={{ textAlign: 'center' }}>
+                  <span style={{ fontSize: '2rem', fontWeight: 800, display: 'block', marginBottom: '5px', color: '#ff6b35' }}>{stat.number}</span>
+                  <span style={{ fontSize: '0.75rem', color: '#7f8c8d', textTransform: 'uppercase', letterSpacing: '1px' }}>{stat.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div style={{ position: 'relative', width: '100%', maxWidth: '600px', marginBottom: '60px' }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
               src={heroSvg}
               alt="Professional Legal Services"
-              style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}
+              style={{ width: '100%', maxWidth: '550px', height: 'auto', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}
             />
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '30px', width: '100%', paddingTop: '40px', borderTop: '2px solid #ecf0f1' }}>
-            {[
-              { number: 'Veterans', label: 'Team Members' },
-              { number: 'MN + 5', label: 'States Covered' },
-              { number: 'Since 2014', label: 'Experience' },
-              { number: '7am-10pm', label: 'Service Hours' },
-            ].map((stat) => (
-              <div key={stat.label} style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '2rem', fontWeight: 800, display: 'block', marginBottom: '5px', color: '#ff6b35' }}>{stat.number}</span>
-                <span style={{ fontSize: '0.75rem', color: '#7f8c8d', textTransform: 'uppercase', letterSpacing: '1px' }}>{stat.label}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
