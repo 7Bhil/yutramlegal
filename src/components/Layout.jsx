@@ -63,9 +63,9 @@ const Layout = ({ children }) => {
           <ul style={{ display: 'flex', gap: '30px', listStyle: 'none', margin: 0, padding: 0 }} className="desktop-nav">
             <li><Link to="/" style={navLinkStyle('/')} onMouseEnter={e => { if (!isActive('/')) { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' } }} onMouseLeave={e => { if (!isActive('/')) { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' } }}>Home</Link></li>
             <li><Link to="/tracking" style={navLinkStyle('/tracking')} onMouseEnter={e => { if (!isActive('/tracking')) { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' } }} onMouseLeave={e => { if (!isActive('/tracking')) { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' } }}>Track Order</Link></li>
-            <li><a href="#" style={{ color: '#7f8c8d', textDecoration: 'none', fontWeight: 600, padding: '8px 16px', borderRadius: '8px', transition: 'all 0.3s ease' }} onMouseEnter={e => { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' }} onMouseLeave={e => { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' }}>Services</a></li>
-            <li><a href="#" style={{ color: '#7f8c8d', textDecoration: 'none', fontWeight: 600, padding: '8px 16px', borderRadius: '8px', transition: 'all 0.3s ease' }} onMouseEnter={e => { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' }} onMouseLeave={e => { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' }}>About Us</a></li>
-            <li><a href="#" style={{ color: '#7f8c8d', textDecoration: 'none', fontWeight: 600, padding: '8px 16px', borderRadius: '8px', transition: 'all 0.3s ease' }} onMouseEnter={e => { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' }} onMouseLeave={e => { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' }}>Contact</a></li>
+            <li><Link to="/services" style={navLinkStyle('/services')} onMouseEnter={e => { if (!isActive('/services')) { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' } }} onMouseLeave={e => { if (!isActive('/services')) { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' } }}>Services</Link></li>
+            <li><Link to="/about" style={navLinkStyle('/about')} onMouseEnter={e => { if (!isActive('/about')) { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' } }} onMouseLeave={e => { if (!isActive('/about')) { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' } }}>About Us</Link></li>
+            <li><Link to="/contact" style={navLinkStyle('/contact')} onMouseEnter={e => { if (!isActive('/contact')) { e.currentTarget.style.color = '#ff6b35'; e.currentTarget.style.background = '#fff5f0' } }} onMouseLeave={e => { if (!isActive('/contact')) { e.currentTarget.style.color = '#7f8c8d'; e.currentTarget.style.background = 'transparent' } }}>Contact</Link></li>
           </ul>
 
           {/* Hamburger button */}
@@ -113,9 +113,9 @@ const Layout = ({ children }) => {
         >
           <Link to="/" style={mobileNavLinkStyle('/')} onClick={closeMenu}>Home</Link>
           <Link to="/tracking" style={mobileNavLinkStyle('/tracking')} onClick={closeMenu}>Track Order</Link>
-          <a href="#" style={mobileNavLinkStyle('#')} onClick={closeMenu}>Services</a>
-          <a href="#" style={mobileNavLinkStyle('#')} onClick={closeMenu}>About Us</a>
-          <a href="#" style={mobileNavLinkStyle('#')} onClick={closeMenu}>Contact</a>
+          <Link to="/services" style={mobileNavLinkStyle('/services')} onClick={closeMenu}>Services</Link>
+          <Link to="/about" style={mobileNavLinkStyle('/about')} onClick={closeMenu}>About Us</Link>
+          <Link to="/contact" style={mobileNavLinkStyle('/contact')} onClick={closeMenu}>Contact</Link>
         </div>
       </nav>
 
