@@ -132,9 +132,9 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section style={{ background: 'white', padding: '60px 20px', overflow: 'hidden' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
-          <div style={{ paddingRight: '20px' }}>
+      <section style={{ background: 'white', minHeight: '85vh', display: 'flex', alignItems: 'center', padding: '60px 20px', overflow: 'hidden' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', width: '100%' }}>
+          <div style={{ paddingRight: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ color: '#ff6b35', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '15px' }}>
               VETERAN-OWNED &amp; OPERATED
             </div>
