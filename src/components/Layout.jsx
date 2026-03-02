@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
       )}
 
       {/* Navigation */}
-      <nav style={{ background: 'white', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', position: 'sticky', top: 0, zIndex: 1000 }}>
+      <nav style={{ background: 'white', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', position: 'sticky', top: 0, zIndex: 1200 }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '15px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="container-px">
           {/* Logo */}
           <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#2c3e50', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
@@ -108,7 +108,9 @@ const Layout = ({ children }) => {
           display: 'flex',
           flexDirection: 'column',
           gap: '6px'
-        }}>
+        }}
+        onClick={(e) => e.stopPropagation()}
+        >
           <Link to="/" style={mobileNavLinkStyle('/')} onClick={closeMenu}>Home</Link>
           <Link to="/tracking" style={mobileNavLinkStyle('/tracking')} onClick={closeMenu}>Track Order</Link>
           <a href="#" style={mobileNavLinkStyle('#')} onClick={closeMenu}>Services</a>
