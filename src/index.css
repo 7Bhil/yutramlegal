@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+  }
+}
+
+/* Fade-in animation (used in Order, Tracking, Success) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse animation for active timeline dot */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2); }
+  50%       { box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.1); }
+}
+
+/* Status badge classes (used in Tracking.jsx) */
+.status-pending     { background: #fff3cd; color: #856404; }
+.status-in-progress { background: #cce5ff; color: #004085; }
+.status-completed   { background: #d4edda; color: #155724; }
+
+/* Responsive: show hamburger, hide desktop nav on ≤ 768px */
+@media (max-width: 768px) {
+  .desktop-nav    { display: none !important; }
+  .hamburger-btn  { display: flex !important; }
+
+  /* Hero: single column */
+  .hero-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* Footer: single column */
+  .footer-top-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .footer-bottom-row {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+}
