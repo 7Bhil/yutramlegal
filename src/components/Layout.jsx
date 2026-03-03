@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import PrivacyModal from './PrivacyModal'
 import TermsModal from './TermsModal'
@@ -10,6 +10,14 @@ const Layout = ({ children }) => {
   const [showTermsModal, setShowTermsModal] = useState(false)
   const [showCookieModal, setShowCookieModal] = useState(false)
   const location = useLocation()
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024) setIsMenuOpen(false)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const isActive = (path) => location.pathname === path
 
@@ -102,12 +110,12 @@ const Layout = ({ children }) => {
           background: 'white',
           boxShadow: '-5px 0 30px rgba(0,0,0,0.15)',
           padding: '80px 25px 40px',
-          zIndex: 1150,
+          zIndex: 1300,
           transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
           display: 'flex',
           flexDirection: 'column',
-          gap: '6px'
+          gap: '10px'
         }}
         onClick={(e) => e.stopPropagation()}
         >
