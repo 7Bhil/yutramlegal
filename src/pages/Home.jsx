@@ -134,7 +134,7 @@ const Home = () => {
       {/* Hero Section */}
       <section style={{ background: 'white', minHeight: '85vh', display: 'flex', alignItems: 'center', padding: '60px 0', overflow: 'hidden' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'center', width: '100%' }} className="hero-content-grid container-px">
-          <div style={{ paddingRight: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="hero-text-column" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ color: '#ff6b35', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '15px' }}>
               VETERAN-OWNED &amp; OPERATED
             </div>
@@ -204,7 +204,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="hero-image-container" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
               src={heroSvg}
               alt="Professional Legal Services"
@@ -303,7 +303,7 @@ const Home = () => {
                   <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600 }}>Case Name *</label>
                   <input type="text" name="caseName" value={formData.caseName} onChange={handleInputChange} placeholder="Enter case name" style={inputStyle} />
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                  <div className="responsive-grid-2">
                     <div>
                       <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600 }}>Recipient First Name *</label>
                       <input type="text" name="recipientFirstName" value={formData.recipientFirstName} onChange={handleInputChange} placeholder="First name" style={inputStyle} />
@@ -320,7 +320,7 @@ const Home = () => {
                   <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600 }}>Service Address *</label>
                   <textarea name="recipientAddress" value={formData.recipientAddress} onChange={handleInputChange} placeholder="Complete service address" style={{ ...inputStyle, height: '100px', resize: 'vertical' }} />
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                  <div className="responsive-grid-2">
                     <div>
                       <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600 }}>Your Email *</label>
                       <input type="email" name="contactEmail" value={formData.contactEmail} onChange={handleInputChange} placeholder="your@email.com" style={inputStyle} />

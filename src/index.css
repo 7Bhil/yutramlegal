@@ -47,6 +47,18 @@
 .status-completed   { background: #d4edda; color: #155724; }
 
 /* Utility Classes */
+.responsive-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .container-px {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
@@ -97,7 +109,24 @@
   }
 }
 
+.hero-text-column {
+  padding-right: 20px;
+}
+
+@media (max-width: 1024px) {
+  .hero-image-container {
+    padding: 0 15px;
+  }
+}
+
 @media (max-width: 768px) {
+
+  .hero-text-column {
+    padding-right: 0;
+  }
+  .hero-image-container {
+    padding: 0 20px;
+  }
 
   /* Hero: single column */
   .hero-content-grid {
@@ -114,16 +143,17 @@
   }
 
   .hero-buttons-container {
-    flex-wrap: nowrap !important;
-    gap: 10px !important;
+    flex-direction: column !important;
+    gap: 15px !important;
   }
 
   .hero-buttons-container > * {
-    padding: 14px 15px !important;
-    font-size: 0.9rem !important;
-    flex: 1;
+    width: 60% !important;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 16px 15px !important;
+    font-size: 1rem !important;
     text-align: center;
-    white-space: nowrap;
   }
 
   .hero-stats-grid {
